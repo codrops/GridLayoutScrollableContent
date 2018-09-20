@@ -311,7 +311,7 @@
 			this.DOM.closeCtrl.addEventListener('click', () => this.closeItem());
 			// (Incomplete! For now: if theres an open item, then show back the grid.
 			this.resizeFn = () => {
-				if (this.current === -1) return;
+				if (this.current === -1 || winsize.width === window.innerWidth) return;
 				this.closeItem(false);
 			};
 			window.addEventListener('resize', this.resizeFn);
